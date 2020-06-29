@@ -1,8 +1,5 @@
-import "d3/dist/d3.js";
-import "bootstrap/dist/css/bootstrap.css";
-
-const url =
-  "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json";
+import * as d3 from "d3";
+const url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json";
 
 function makeRequest(method, url, body = null) {
   return new Promise((resolve, reject) => {
