@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="./slyles.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<script src="./index.js"></script>
+
+</head>
+
+    
+    <body id="main-wrapper" class="text-center">
+
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Great Quotes</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+    
+      <main id="quote-box" role="main" class="inner cover p-3">
+        <p id="text" class="lead">Cover is a one-page template for building simple and beautiful home pages. 
+          Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+
+        <div id="author">Author</div>
+
+          <div class="d-flex justify-content-between">
+          <button id="new-quote" onclick="quoteGenerate()" class="btn btn-lg btn-secondary" >New quote</button>
+          <a class="align-self-end" id="tweet-quote" href="" ><i class="fab fa-twitter"></i></a>
+          </div>
+
+      </main>
+    
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Designed by <a href="https://github.com/whiteadam2">WhiteAdam</a>.</p>
+        </div>
+      </footer>
+
+</body>
+</html>

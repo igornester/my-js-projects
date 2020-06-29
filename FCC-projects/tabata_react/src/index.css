@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%;
+  font-size: 28px;
+  color: white !important;
+  background-color: #153a61 !important;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 830px;
+  padding: 100px;
+  margin: auto;
+}
+
+.pointers {
+  cursor: pointer;
+}
+
+span {
+  margin: 5px;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+#controls div {
+  display: inline;
+  margin: 5px;
+}
+
+#time-left {
+  font-size: 80px;
+}
+
+#tabata {
+  padding: 60px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#timer {
+  margin-top: 25px;
+}
+
+#tabata div {
+  /*  border: 1px solid black !important; */
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

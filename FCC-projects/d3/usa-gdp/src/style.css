@@ -1,0 +1,35 @@
+#container {
+  width: 100%;
+  background-color: #eadedb;
+  padding: 100px 0px 200px 100px;
+}
+
+.bars:hover {
+  fill: red;
+}
+
+svg {
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.axis line,
+path,
+text {
+  stroke: white;
+}
+
+.circle {
+  stroke: seagreen;
+  fill: yellow;
+}
+
+.circle_d {
+  stroke: seagreen;
+  fill: springgreen;
+}
+
+.legend {
+  stroke: black;
+  font-size: 12px;
+}

@@ -1,0 +1,85 @@
+
+<body>
+  <script>
+
+  //  Набор данных для построения графика
+    const dataset = [
+                  [ 34,     78 ],
+                  [ 109,   280 ],
+                  [ 310,   120 ],
+                  [ 79,   411 ],
+                  [ 420,   220 ],
+                  [ 233,   145 ],
+                  [ 333,   96 ],
+                  [ 222,    333 ],
+                  [ 78,    320 ],
+                  [ 21,   123 ]
+                ];
+
+//Ширина и высота  контейнера SVG в котором будет отрисован график
+    const w = 500;
+    const h = 500;
+
+ // Отстум между границей контейнера SVG и графиком   
+    const padding = 60;
+
+// Масштабируем координаты X данных по нижней границе графика
+    const xScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[0])])
+                     .range([padding, w - padding]);
+
+
+// Масштабируем координаты Y данных по левой границе графика
+// Так как по-умолчанию координата Y отсчитывается с верхнего края вниз,
+// то самая максимальная величина должна иметь наименьшую коорнидату
+    const yScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[1])])
+                     .range([h - padding, padding]);
+
+
+
+// отрисовываем контейнер svg 
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+
+// добавляем точки на график отмасштибированные  функциями xScale и yScale
+    svg.selectAll("circle")
+       .data(dataset)
+       .enter()
+       .append("circle")
+       .attr("cx", (d) => xScale(d[0]))
+       .attr("cy",(d) => yScale(d[1]))
+       .attr("r", (d) => 5);
+
+// добавляем текст на график смешенный на 10 юнитов относительно точки вправо
+    svg.selectAll("text")
+       .data(dataset)
+       .enter()
+       .append("text")
+       .text((d) =>  (d[0] + "," + d[1]))
+       .attr("x", (d) => xScale(d[0] + 10))
+       .attr("y", (d) => yScale(d[1]))
+
+// определяем оси координат на основании функций xScale и yScale
+    const xAxis = d3.axisBottom(xScale);
+    const yAxis = d3.axisLeft(yScale);
+
+
+
+// Выводим оси на график с учетом отступов и того что ось X должна распологаться под графиком а не над ним
+
+    svg.append("g")
+       .attr("transform", "translate(0," + (h - padding) + ")")
+       .call(xAxis);
+
+
+    svg.append("g")
+       .attr("transform", "translate("+padding+",0)")
+       .call(yAxis);
+
+
+  </script>
+</body>
