@@ -38,7 +38,7 @@ function sendEmail1(email, movies, callback) {
   }, 4000);
 }
 
-// Decision with Awair Async
+// Decision with Await Async
 
 async function sendMovies() {
   const user = await getCustomer(1);

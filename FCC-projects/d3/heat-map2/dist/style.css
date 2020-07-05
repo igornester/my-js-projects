@@ -1,0 +1,39 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+#container {
+  width: 2200px;
+  background-color: #eadedb;
+  padding-top: 100px;
+}
+
+.bars:hover {
+  stroke: black;
+}
+
+svg {
+  display: block;
+  width: 1600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.axis line,
+path,
+text {
+  stroke: black;
+}
+
+.circle {
+  stroke: seagreen;
+  fill: yellow;
+}
+
+.circle_d {
+  stroke: seagreen;
+  fill: springgreen;
+}
+
+.legend {
+  stroke: black;
+  font-size: 12px;
+}
